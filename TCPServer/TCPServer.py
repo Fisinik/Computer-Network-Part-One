@@ -27,6 +27,8 @@ class ThreadedServer(object):
             
 def listenToClient(self, client, address):
         #funksionet
+        
+        #Metoda 1 - Fisnik Spahija
         def funfact():
             rand = random.randint(1,12)
             if rand == 1:
@@ -58,7 +60,6 @@ def listenToClient(self, client, address):
         def info():
             info="Metodat qe mund te implementohen nga serveri jane:\n1.IP\n2.PORT\n3.ZANORE\n4.PRINTO\n5.HOST\n6.TIME\n7.KENO\n8.FAKTORIEL\n9.KONVERTO\n10.MOOD\n11.PAGA\n12.FUNC\n13.KTHE\n14.CAESAR\nFIBO\nPITAGORA\nFUNFACT\n."     
             client.send(info.encode("utf-8"))
-         
         def keno():
             i=0
             A = []
@@ -92,47 +93,47 @@ def listenToClient(self, client, address):
                 client.send(a.encode('utf-8'))
             else:
                 client.send("Error: Pergjigja shume e gjate!".encode('utf-8'))
- 
+
         def printo(fjaliaDerguar):
             client.send(str(fjaliaDerguar).encode('utf-8'))
 
         def celsiusToKelvin(celsius):
-            kelvin=celsius+273.15
-            client.send(("Pergjigja: "+str(kelvin).encode("UTF-8")+"K"))
+            kelvin=int(celsius)+273.15
+            client.send((str(kelvin)+" K").encode('utf-8'))
             
         def celsiusToFahrenheit(celsius):
-            fahrenheit = celsius + 32
-            client.send(("Pergjigja: "+str(fahrenheit).encode("UTF-8")+"F"))
+            fahrenheit = int(celsius) + 32
+            client.send((str(fahrenheit)+"F").encode("UTF-8"))
 
         def fahrenheitToCelsius(fahrenheit):
-            celsius = fahrenheit - 32 
-            client.send(("Pergjigja: "+str(celsius).encode("UTF-8")+"C"))
+            celsius = int(fahrenheit) - 32 
+            client.send((str(celsius)+"C").encode("UTF-8"))
             
         def kelvinToFahrenheit(kelvin):
-            fahrenheit=kelvin*1.8-459.67
-            client.send(("Pergjigja: "+str(fahrenheit).encode("UTF-8")+"F"))
+            fahrenheit=int(kelvin)*1.8-459.67
+            client.send((str(fahrenheit)+"F").encode("UTF-8"))
 
         def kelvinToCelsius(kelvin):
-            celsius=kelvin-273.15
-            client.send(("Pergjigja: "+str(celsius).encode("UTF-8")+"C"))
+            celsius=int(kelvin)-273.15
+            client.send((str(celsius)+"C").encode("UTF-8"))
             
         def fahrenheitToKelvin(fahrenheit):
-            kelvin=((fahrenheit+459.67)*5)/9
-            client.send(("Pergjigja: "+str(kelvin).encode("UTF-8")+"K"))
+            kelvin=((int(fahrenheit)+459.67)*5)/9
+            client.send((str(kelvin)+"K").encode("UTF-8"))
 
         def poundToKilogram(pound):
-            kilogram = pound - 0.546408
+            kilogram = int(pound) - 0.546408
             if kilogram != 1:
-                client.send(("Pergjigja: "+str(round(kilogram,4)).encode("UTF-8")+" kilograms"))    
+                client.send((str(round(kilogram,4))+" kilograms").encode("UTF-8"))     
             else:    
-                client.send(("Pergjigja: "+str(kilogram).encode("UTF-8")+" kilogram"))               
+                client.send((str(kilogram)+" kilogram").encode("UTF-8"))               
 
         def kilogramToPound(kilogram):
-            pound = kilogram + 0.546408
+            pound = int(kilogram) + 0.546408
             if pound != 1:
-                client.send(("Pergjigja: "+str(round(pound,4)).encode("UTF-8")+" pounds"))   
+                client.send((str(round(pound,4))+" pounds").encode("UTF-8"))   
             else:
-                client.send(("Pergjigja: "+str(pound).encode("UTF-8")+" pound"))   
+                client.send((str(pound)+" pound").encode("UTF-8"))  
                 
         def faktorieli(numri):
             i=1
@@ -140,7 +141,7 @@ def listenToClient(self, client, address):
             for i in range(1,numri+1):
                 f=f*i
                 i=i+1
-            client.send(("Pergjigja: "+str(f).encode("UTF-8")))
+            client.send((str(f).encode("UTF-8")))
                 
                 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  
@@ -159,7 +160,7 @@ def listenToClient(self, client, address):
                             #| _______ |
                             #|         |
                             #----------- 
-           
+
             elif mood==2:
                 #sad
                 client.send("\nYou are:\n-----------\n|         |\n| 0     0 |\n|    <    |\n|         |\n|    .    |\n|  .   .  |\n| .     . |\n-----------".encode('utf-8'))
@@ -183,18 +184,18 @@ def listenToClient(self, client, address):
                             #| .     . |
                             #|  '...'  |
                             #-----------                             
-  
+
         # Metoda 2 - Fjolla Beqiri
 
         
         def paga(bruto):
             trusti=5 #(%)
-            pagaBruto=bruto
+            pagaBruto=int(bruto)
             kontributiPunetorit=(pagaBruto*trusti)/100.0
             kontributiPunedhenesit=kontributiPunetorit
             gjithsejKontributet=kontributiPunetorit+kontributiPunedhenesit
             pagaPerTatim=pagaBruto-kontributiPunetorit
-   
+
             if pagaPerTatim<=80:
                         teArdhuratETatueshme=pagaPerTatim-0
                         pagaPrej0ne80=(teArdhuratETatueshme*0)/100.0
@@ -215,10 +216,10 @@ def listenToClient(self, client, address):
                         pagaMbi450=(teArdhuratETatueshme*10)/100.0
                         gjithsejTatimi=pagaPrej250ne450+pagaPrej250ne450+pagaMbi450
             pagaNeto=pagaBruto-kontributiPunetorit-gjithsejTatimi
-            client.send("Pergjigja: Vlere neto e pages eshte "+str(pagaNeto)+" euro .")                        
+            client.send(("Vlera neto e pages eshte "+str(pagaNeto)+" euro .").encode)                        
 
-
- #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------       				
+            
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------       				
         # Metoda 1 - Fjolla Zatriqi
 
         def kthePrapa(var):
@@ -235,9 +236,9 @@ def listenToClient(self, client, address):
         def gCf(x):
           y=g(f(x))
          # print(y)
-          client.sendto(str(y).encode("utf-8"))
+          client.send(str(y).encode("utf-8"))
 
- #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
         #Elza Latifi -Metoda 1
 
         def caesar(plaintext):
@@ -403,13 +404,13 @@ def listenToClient(self, client, address):
                 recMovies(randomMovie)
  
 
-        while True:
+    while True:
             try:
                 data = client.recv(1024)
                 data = data.decode("utf-8")
                 metoda = data.split(" ")
 
-                if len(metoda) == 1:
+                if len(metoda) == 1 and sys.getsizeof(data)<129:
                     
                     if metoda[0] == "FUNFACT":
                         client.send(funfact().encode('utf-8'))
@@ -428,7 +429,7 @@ def listenToClient(self, client, address):
                     elif metoda[0] == "MOOD":
                         mood()
 
-                else:  
+                elif sys.getsizeof(data)<129:  
                     if metoda[0] == "ZANORE":
                         teksti = data[7:]
                         zanore(teksti) 
@@ -450,17 +451,20 @@ def listenToClient(self, client, address):
                     elif metoda[0]=="YJET":
                         numri=int(metoda[1])
                         stars(numri)
-                    elif metoda[0]=="FIBO" and len(metoda)==2 and metoda[1].replace('.','',1).isdigit():
-                        numri=int(data[4:])
-                        fibonacci(numri)
+                    elif metoda[0]=="FIBO":
+                        if (len(metoda)) == 2:
+                            numri=int(data[4:])
+                            fibonacci(numri)
+                        else:
+                            client.send("Kerkesa nuk u realizua. Ju lutem provoni prap!")
                     elif metoda[0]=="PITAGORA" and len(metoda)==3 and len(metoda[1])==1 and len(metoda[2])==1 and metoda[1].replace('.','',1).isdigit() and metoda[2].replace('.','',1).isdigit() :
                         k1=int(metoda[1])
                         k2=int(metoda[2])
                         pitagora(k1,k2)
-                    elif metoda[0]=="KONVERTO" and len(metoda)==3: #and metoda[1].replace('.','',1).isdigit():    
+                    elif metoda[0]=="KONVERTO":#and len(metoda)==3: #and metoda[1].replace('.','',1).isdigit():    
                               vlera=metoda[2]              
                               if metoda[1]=="CelsiusToKelvin":
-                                  celsiusToKelvin(vlera)
+                                  celsiusToKelvin(float(vlera))
                               elif metoda[1]=="CelsiusToFahrenheit":
                                   celsiusToFahrenheit(float(vlera))
                               elif metoda[1]=="FahrenheitToCelsius":
@@ -477,20 +481,24 @@ def listenToClient(self, client, address):
                                   kilogramToPound(float(vlera))
                               else:
                                   client.send("Pergjigja:Kjo kerkese nuk mund te shqyrohet.Kerko dicka tjeter.".encode("UTF-8"))
-                    elif metoda[0].decode("UTF-8")=="PAGA" and len(metoda)==2 and metoda[1].replace('.','',1).isdigit():
+                    elif metoda[0]=="PAGA" and len(metoda)==2 and metoda[1].replace('.','',1).isdigit():
                               bruto=float(data[4:])
                               if bruto<0:
                                   client.send("Vlere invalide e pages bruto.".encode("utf-8"))
                               else:
                                   paga(bruto)
-                    elif metoda[0].decode("utf-8")=="FAKTORIEL" and len(metoda)==2 and metoda[1].replace('.','',1).isdigit():
+                    elif metoda[0]=="FAKTORIEL" and len(metoda)==2 and metoda[1].replace('.','',1).isdigit():
                               numri=metoda[1]
                               if "." not in numri:
                                   faktorieli(int(numri))
                               elif "." in numri:
                                   numri=float(metoda[1])
-                                  client.send(str(round(math.gamma(numri+1),5)).encode("utf-8"))                        
-                        except:
+                                  client.send(str(round(math.gamma(numri+1),5)).encode("utf-8"))
+                    else:
+                        client.send("Kerkesa nuk eshte valide! Ju lutem provoni prap.".encode('utf-8'))
+                else:
+                    client.send("Kerkesa nuk eshte valide! Ju lutem provoni prap.".encode('utf-8'))
+            except:
                 client.close()
                 False
 
