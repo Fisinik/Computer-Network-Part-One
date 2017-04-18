@@ -242,3 +242,9 @@ def listenToClient(self, client, address):
  
 
         while True:
+            try:
+                data = client.recv(1024)
+                data = data.decode("utf-8")
+                metoda = data.split(" ")
+
+                if len(metoda) == 1:
