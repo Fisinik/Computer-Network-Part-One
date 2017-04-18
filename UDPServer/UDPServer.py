@@ -216,3 +216,57 @@ def gCf(x,s,c):
 
   s.sendto(str(y).encode("utf-8"),c)
  
+
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#Elza Latifi -Metoda 1
+
+def caesar(plaintext,s,c):
+    ciphertext=''
+    for char in plaintext:
+        if char.isalpha():
+            alfabeti=ord(char)+5
+            if(alfabeti>ord('z')):
+                alfabeti=alfabeti-26
+        shkronjaFundit=chr(alfabeti)
+        ciphertext+=shkronjaFundit
+    s.sendto("Ciphertext: "+str(ciphertext),c)
+
+def stars(nr,s,c):
+    
+    if nr=='5':
+        s.sendto("Yjesia me e njohur me 5 yje eshte Kasiopea".encode('utf-8'),c)
+    elif nr=='6':
+        s.sendto("Yjesia me e njohur me 6 yje eshte Lyra".encode('utf-8'),c)
+    elif nr=='7':
+        s.sendto("Yjesia me e njohur me 7 yje eshte Kygus".encode('utf-8'),c)
+    elif nr=='8':
+        s.sendto("Yjesite me te njohur me 8 yje jane Andromeda,Luani dhe Peshorja".encode('utf-8'),c)
+    elif nr=='9':
+        s.sendto("Yjesia me e njohur me 9 yje eshte Bricjapi".encode('utf-8'),c)
+    elif nr=='10':
+        s.sendto("Yjesia me e njohur me 10 yje eshte Pegasusi".encode('utf-8'),c)
+    elif nr=='11':
+        s.sendto("Yjesia me e njohur me 11 yje eshte Hidra".encode('utf-8'),c)
+    elif nr=='12':
+        s.sendto("Yjesia me e njohur me 12 yje eshte Virgjeresha".encode('utf-8'),c)
+    elif nr=='13':
+        s.sendto("Yjesia me e njohur me 13 yje eshte Ofikusi".encode('utf-8'),c)
+    elif nr=='14':
+        s.sendto("Yjesia me e njohur me 14 yje eshte Drako".encode('utf-8'),c)
+    elif nr<'5':
+        s.sendto("Nuk ka yjesi me numer me te vogel te yjeve se 5".encode('utf-8'),c)
+    elif nr>'14' and nr<'100':
+        s.sendto("Jane gjithsej 88 yjesi te njohura ne dy hemisferat; 78 nga te cilat kane numer te yjeve me te madh se"+str(nr).encode('utf-8'),c)
+    else :
+        s.sendto("Jep nje numer me te vogel se 100".encode('utf-8'),c)
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
