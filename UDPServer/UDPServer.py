@@ -331,7 +331,42 @@ def handleClient(s,c,data):
                       funfact(s,c)
                 else:
                     s.sendto("Pergjigja:Kjo kerkese nuk mund te kryhet.Kerko dicka tjeter.".encode("UTF-8"),c)
-
+            else: 
+                if metoda[0]=="ZANORE":
+                    gjatesia=len(metoda[1])
+                    if str(data[7:]).startswith(" "):
+                        s.sendto("Pergjigja:Formati i kerkeses eshte gabim.",c)
+                    else:
+                        teksti=data[7:]
+                        zanore(teksti,s,c)
+                elif metoda[0]=="KTHE":
+                    teksti=data[4:]
+                    kthePrapa(str(teksti),s,c)
+                elif metoda[0]=="FUNC" and metoda[1].replace('.','',1).isdigit():
+                    teksti=data[5:]
+                    if " " in teksti:
+                        s.sendto("Parametri hyres duhet te jete nje numer",c)
+                    else:
+                        gCf(float(teksti),s,c)
+                elif metoda[0]=="PRINTO":
+                    gjatesia=len(metoda[1])
+                    if str(data[7:]).startswith(" "):
+                        s.sendto("Pergjigja:Formati i kerkeses eshte gabim.",c)
+                    else:
+                        teksti=data[7:]                             
+                        printo(teksti,s,c)
+                elif metoda[0]=="CAESAR" :
+                    plaintext=data[7:]
+                    if plaintext.isdigit() :
+                        s.sendto("Pergjigja:Keni dhene parameter te gabuar.",c)
+                    else:
+                        caesar(str(plaintext),s,c)
+                elif metoda[0]=="YJET":
+                    numri=int(metoda[1])
+                    stars(str(numri),s,c)
+                elif metoda[0]=="FIBO" and len(metoda)==2 and metoda[1].replace('.','',1).isdigit():
+                    numri=int(data[4:])
+                    fibonacci(numri,s,c)
 
     except:
         pass
