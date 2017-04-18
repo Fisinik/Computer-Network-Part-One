@@ -141,3 +141,11 @@ def listenToClient(self, client, address):
           client.sendto(str(y).encode("utf-8"))
 
  #-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------        
+
+        def recMovies(genre):
+    
+            if genre == "aksion":
+                rand = random.randint(1,5)
+                if rand == 1:
+                    rand = "Taken (2008): Casting Liam Neeson (the badass) and his daughter (Maggie Grace) kidnapped by some drug dealing Albanians"
+                    client.send(rand.encode('utf-8'))
