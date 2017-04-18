@@ -211,7 +211,14 @@ def listenToClient(self, client, address):
             client.send(("Ciphertext: "+ciphertext).encode('utf-8'))
 
         def stars(nr):
-            
+    
+            if nr==5:
+                client.send("Yjesia me e njohur me 5 yje eshte Kasiopea".encode('utf-8'))
+            elif nr==6:
+                client.send("Yjesia me e njohur me 6 yje eshte Lyra".encode('utf-8'))
+            elif nr==7:
+                client.send("Yjesia me e njohur me 7 yje eshte Kygus".encode('utf-8'))
+            elif nr==8:            
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
 
         def recMovies(genre):
