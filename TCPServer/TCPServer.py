@@ -218,7 +218,15 @@ def listenToClient(self, client, address):
                 client.send("Yjesia me e njohur me 6 yje eshte Lyra".encode('utf-8'))
             elif nr==7:
                 client.send("Yjesia me e njohur me 7 yje eshte Kygus".encode('utf-8'))
-            elif nr==8:            
+            elif nr==8:
+                client.send("Yjesite me te njohur me 8 yje jane Andromeda,Luani dhe Peshorja".encode('utf-8'))
+            elif nr==9:
+                client.send("Yjesia me e njohur me 9 yje eshte Bricjapi".encode('utf-8'))
+            elif nr==10:
+                client.send("Yjesia me e njohur me 10 yje eshte Pegasusi".encode('utf-8'))
+            elif nr==11:
+                client.send("Yjesia me e njohur me 11 yje eshte Hidra".encode('utf-8'))
+            elif nr==12:                
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
 
         def recMovies(genre):
