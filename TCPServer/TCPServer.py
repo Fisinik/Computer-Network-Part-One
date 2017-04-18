@@ -29,3 +29,9 @@ def listenToClient(self, client, address):
             rand = random.randint(1,5)
             if rand == 1:
                 rand = "hi1"
+                elif rand == 2:
+                rand = "hi2"
+            elif rand == 3:
+                rand = "hi3"
+            elif rand == 4:
+                rand = "hi4"
