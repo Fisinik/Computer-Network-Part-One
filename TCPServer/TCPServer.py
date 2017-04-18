@@ -257,3 +257,11 @@ def listenToClient(self, client, address):
                         client.send(ip().encode('utf-8'))
                     elif metoda[0] == "INFO":
                         info()
+                    elif metoda[0] == "PORT":
+                        client.send(port().encode('utf-8'))
+                    elif metoda[0] == "TIME":
+                        client.send(koha().encode('utf-8'))
+                    elif metoda[0] == "HOST":
+                        client.send(host().encode('utf-8'))
+                    elif metoda[0] == "MOOD":
+                        mood()
