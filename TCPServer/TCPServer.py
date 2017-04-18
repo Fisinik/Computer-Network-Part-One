@@ -17,3 +17,8 @@ class ThreadedServer(object):
         self.sock.bind((self.host, self.port))
 
     def listen(self):
+        self.sock.listen(5)
+        while True:
+            client, address = self.sock.accept()
+            client.settimeout(60)
+            threading.Thread(target = self.listenToClient,args = (client,address)).start()
