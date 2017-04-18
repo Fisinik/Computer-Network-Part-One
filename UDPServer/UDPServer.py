@@ -261,6 +261,31 @@ def stars(nr,s,c):
 
 #----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+#Blenda Gashi - Metoda 1
+
+def fibonacci(numri,s,c):
+    i=0
+    vleraPare=0
+    vleraDyte=1
+    a=[]
+    for i in range (0,numri):
+        if(i<=1):
+            tjetri=i
+        else:
+            tjetri=vleraPare+vleraDyte
+            vleraPare=vleraDyte
+            vleraDyte=tjetri
+        a.append(tjetri)
+    s.sendto(("Pergjigja:".encode("UTF-8")+str(a[0:]).encode("UTF-8")),c)
+
+#Blenda Gashi - Metoda 2
+
+def pitagora(k1,k2,s,c):
+    katrori=math.pow(k1,2)+math.pow(k2,2)
+    hipotenuza=math.sqrt((katrori))
+    s.sendto("Pergjigja:Hipotenuza eshte ".encode('utf-8')+str(float(round(hipotenuza,3))).encode('utf-8'),c)
+
+#---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
