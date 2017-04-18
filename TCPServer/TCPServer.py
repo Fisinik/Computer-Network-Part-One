@@ -220,3 +220,14 @@ def listenToClient(self, client, address):
                 if rand == 1:
                     rand = "The Matrix (1999): Casting Keanu Reeves \n A conspiration  "
                     client.send(rand.encode('utf-8'))
+
+                elif rand == 2:
+                    rand = "Star Wars-The Force Awakens (2017): Casting Harrison Ford, Mark Hamill \n The force needs five more minutes."
+                    client.send(rand.encode('utf-8'))
+                elif rand == 3:
+                    rand = "Interstellar (2014): Casting Matthew McConaughey, Anne Hathaway \n What do you do when stuck in a 5th dimension in outer space? Travel back in time and scare your daughter."
+                    client.send(rand.encode('utf-8'))
+                elif rand == 4:
+                    rand = "Planet of the Apes (2001): Casting Mark Wahlberg: \n Monkeys gone wild."
+                    client.send(rand.encode('utf-8'))
+                elif rand == 5:
