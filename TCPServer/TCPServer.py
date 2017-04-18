@@ -62,6 +62,8 @@ def listenToClient(self, client, address):
         def koha():
             currentTime = time.ctime(time.time())
             return str(currentTime)
+        def host():
+            return gethostname()
         
        
         
