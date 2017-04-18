@@ -22,7 +22,7 @@ def info(s,c):
 def zanore(fjalia,s,c):
     count=0
     for letter in fjalia:
-        if(letter in ['A','E','I','O','U','Y','\u00CB','\u00EB','a','e','i','o','u','y']):
+        if(letter in ['A','E','I','O','U','Y','\U00CB','\U00EB','a','e','i','o','u','y']):
             count=count+1
     a="Pergjigja:Teksi i derguar permban "+str(count)+" zanore"
     if sys.getsizeof(a)<=128:
