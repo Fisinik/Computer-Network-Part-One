@@ -32,13 +32,12 @@ while True:
         print("Pergjigja: ", sock.recv(1024).decode("utf-8"))
     elif ( data == "IP" or data == "PORT" or data == "ZANORE" or data == "HOST" or data == "TIME" ):
         sock.send(data.encode("utf-8"))
-        print("Pergjigja: ", sock.recv(128).decode("utf-8"))
-    elif ( data == "help" or data == "HELP"):
-        info()
-    elif ( data == "KONVERTO" and len(metoda) == 1):
-        print("KONVERTO opsionet:\n===================\nKONVERTO     ")
-    elif ( data == "FIBO" and len(metoda) == 1):
-        print("FIBO <input_number>")
-    else:    
+   print("Pergjigja: ", sock.recv(128).decode("utf-8"))
+    elif (data == "help" or data == "HELP"):
+       info()
+    elif (data == "KONVERTO" and len(metoda) == 1):
+        print("KONVERTO opsionet:\n===================\nKONVERTO   ")
+    elif (data == "FIBO" and len(metoda) == 1):
+        print("FIBO")
+    else:
         continue
-
