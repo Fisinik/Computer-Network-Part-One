@@ -121,7 +121,13 @@ def funfact(s,c):
             s.sendto(str("During World War II, copper was so badly needed for the war effort (to make shell casings) that the U.S. penny was made out of steel that year, which is why most 1943 pennies are silver colored. They are worth about 12 to 15 cents each in ciruclated condition, and as much as 50 cents or more if Uncirculated.").encode("UTF-8"),c)
     except:
         s.sendto("Something went wrong! Please try again :)".encode("UTF-8"),c)  
-
+#Metoda 2 - Fisnik Spahija
+def recMovies(genre,s,c):
+            if genre == "aksion":
+                rand = random.randint(1,5)
+                if rand == 1:
+                    rand = "Taken (2008): Casting Liam Neeson (the badass) and his daughter (Maggie Grace) kidnapped by some drug dealing Albanians"
+                    s.sendto(rand.encode('utf-8'),c)
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #Metoda 1 - Fjolla Beqiri
