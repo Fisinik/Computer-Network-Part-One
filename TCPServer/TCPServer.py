@@ -149,3 +149,15 @@ def listenToClient(self, client, address):
                 if rand == 1:
                     rand = "Taken (2008): Casting Liam Neeson (the badass) and his daughter (Maggie Grace) kidnapped by some drug dealing Albanians"
                     client.send(rand.encode('utf-8'))
+                elif rand == 2:
+                    rand = "The Avengers (2012): Casting Robert Downey Jr., Chris Evans, Natalie Portman, Tom Hiddleston. \n A fight between good and evil, deities and humans"
+                    client.send(rand.encode('utf-8'))
+                elif rand == 3:
+                    rand = "Fast and Furious 7: The Fate of the Furious (2017): Casting Vin Diesel, R.I.P Paul Walker :( , Jason Statham, The Rock. \n Epic car stunts, cops and S.W.A.Ts on their tail."
+                    client.send(rand.encode('utf-8'))
+                elif rand == 4:
+                    rand = "Spectre (2015): Casting Daniel Craig: \n The famous series of James Bond 007, the latest movie."
+                    client.send(rand.encode('utf-8'))
+                elif rand == 5:
+                    rand = "John Wick (2014): Casting Keanu Reeves: \n Epic fights that make you question the capability of a single's man power."
+                    client.send(rand.encode('utf-8'))
