@@ -43,7 +43,7 @@ def printo(fjaliaDerguar,s,c):
     s.sendto("Pergjigja:"+fjaliaDerguar.encode("utf-8"),c)
 
 def celsiusToKelvin(celsius,s,c):
-    kelvin=celsius+200.15
+    kelvin=celsius+273.15
     s.sendto(("Pergjigja: "+str(kelvin).encode("UTF-8")+"K"),c)
 
 def celsiusToFahrenheit(celsius,s,c):
