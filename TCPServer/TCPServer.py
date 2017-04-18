@@ -475,7 +475,21 @@ def listenToClient(self, client, address):
                                   poundToKilogram(float(vlera))
                               elif metoda[1]=="KilogramToPound":
                                   kilogramToPound(float(vlera))
-                              else:                        
+                              else:
+                                  client.send("Pergjigja:Kjo kerkese nuk mund te shqyrohet.Kerko dicka tjeter.".encode("UTF-8"))
+                    elif metoda[0].decode("UTF-8")=="PAGA" and len(metoda)==2 and metoda[1].replace('.','',1).isdigit():
+                              bruto=float(data[4:])
+                              if bruto<0:
+                                  client.send("Vlere invalide e pages bruto.".encode("utf-8"))
+                              else:
+                                  paga(bruto)
+                    elif metoda[0].decode("utf-8")=="FAKTORIEL" and len(metoda)==2 and metoda[1].replace('.','',1).isdigit():
+                              numri=metoda[1]
+                              if "." not in numri:
+                                  faktorieli(int(numri))
+                              elif "." in numri:
+                                  numri=float(metoda[1])
+                                  client.send(str(round(math.gamma(numri+1),5)).encode("utf-8"))                        
                         except:
                 client.close()
                 False
