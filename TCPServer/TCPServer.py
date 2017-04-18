@@ -208,6 +208,14 @@ def listenToClient(self, client, address):
                         pagaPrej80ne250=6.8
                         pagaPrej250ne450=(teArdhuratETatueshme*8)/100.0
                         gjithsejTatimi=pagaPrej250ne450+pagaPrej250ne450
+            else:
+                        teArdhuratETatueshme=pagaPerTatim-450
+                        pagaPrej80ne250=6.8
+                        pagaPrej250ne450=16
+                        pagaMbi450=(teArdhuratETatueshme*10)/100.0
+                        gjithsejTatimi=pagaPrej250ne450+pagaPrej250ne450+pagaMbi450
+            pagaNeto=pagaBruto-kontributiPunetorit-gjithsejTatimi
+            client.send("Pergjigja: Vlere neto e pages eshte "+str(pagaNeto)+" euro .")                        
 
 
  #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------       				
