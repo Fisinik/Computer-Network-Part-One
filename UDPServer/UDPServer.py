@@ -134,6 +134,9 @@ def recMovies(genre,s,c):
                 elif rand == 3:
                     rand = "Fast and Furious 7: The Fate of the Furious (2017): Casting Vin Diesel, R.I.P Paul Walker :( , Jason Statham, The Rock. \n Epic car stunts, cops and S.W.A.Ts on their tail."
                     s.sendto(rand.encode('utf-8'),c)
+                elif rand == 4:
+                    rand = "Spectre (2015): Casting Daniel Craig: \n The famous series of James Bond 007, the latest movie."
+                    s.sendto(rand.encode('utf-8'),c)
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #Metoda 1 - Fjolla Beqiri
