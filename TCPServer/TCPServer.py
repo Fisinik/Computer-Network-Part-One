@@ -235,7 +235,15 @@ def listenToClient(self, client, address):
             elif nr<5:
                 client.send("Nuk ka yjesi me numer me te vogel te yjeve se 5".encode('utf-8'))
             elif nr>14 and nr<100:                
-                
+                client.send(("Jane gjithsej 88 yjesi te njohura ne dy hemisferat; 78 nga te cilat kane numer te yjeve me te madh se "+str(15)).encode('utf-8'))
+            else :
+                client.send("I'm asking for a Constellation not a Galaxy".encode('utf-8'))
+
+        #----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        #Blenda Gashi - Metoda 1
+
+        def fibonacci(numri):
+            i=0                
                 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
 
