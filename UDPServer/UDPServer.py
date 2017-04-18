@@ -157,6 +157,11 @@ def recMovies(genre,s,c):
                 elif rand == 5:
                     rand = "The Hangover (2009): Casting Bradley Cooper, Ed Helms, Zach Galifianakis: \n Crazy stories of three retarded friends. AAND A MONKEY!"
                     s.sendto(rand.encode('utf-8'),c)
+            elif genre == "horror":
+                rand = random.randint(1,5)
+                if rand == 1:
+                    rand = "The Ring (2002): \n Dul lulija te bunari."
+                    s.sendto(rand.encode('utf-8'),c)
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #Metoda 1 - Fjolla Beqiri
