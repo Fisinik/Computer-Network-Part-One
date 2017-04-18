@@ -231,3 +231,14 @@ def listenToClient(self, client, address):
                     rand = "Planet of the Apes (2001): Casting Mark Wahlberg: \n Monkeys gone wild."
                     client.send(rand.encode('utf-8'))
                 elif rand == 5:
+
+                    rand = "Eternal Sunshine of the Spotless Mind (2004): Casting Jim Carrey (no it's not comedy) \n He finally meets the woman of his life and then loses his memory."
+                    client.send(rand.encode('utf-8'))
+            elif genre == "random":
+                rand = random.randint(0,4)
+                A= ["aksion", "horror", "sci-fi", "drame", "komedi" ]
+                randomMovie = A[rand]
+                recMovies(randomMovie)
+ 
+
+        while True:
