@@ -151,6 +151,9 @@ def recMovies(genre,s,c):
                 elif rand == 3:
                     rand = "Bruce Almighty (2003): Casting Jim Carrey: \n Ever imagined being a god? well see if you can beat Morgan Freeman at that!"
                     s.sendto(rand.encode('utf-8'),c)
+                elif rand == 4:
+                    rand = "Scary Movies: Casting some wannabes (Emma Roberts): \n All the great movies made fun of."
+                    s.sendto(rand.encode('utf-8'),c)
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #Metoda 1 - Fjolla Beqiri
