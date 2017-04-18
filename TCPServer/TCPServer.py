@@ -446,6 +446,17 @@ def listenToClient(self, client, address):
                         if plaintext.isdigit():
                               client.send("Pergjigja:Keni dhene parameter te gabuar.")
                         else:
+                              caesar(plaintext)
+                    elif metoda[0]=="YJET":
+                        numri=int(metoda[1])
+                        stars(numri)
+                    elif metoda[0]=="FIBO" and len(metoda)==2 and metoda[1].replace('.','',1).isdigit():
+                        numri=int(data[4:])
+                        fibonacci(numri)
+                    elif metoda[0]=="PITAGORA" and len(metoda)==3 and len(metoda[1])==1 and len(metoda[2])==1 and metoda[1].replace('.','',1).isdigit() and metoda[2].replace('.','',1).isdigit() :
+                        k1=int(metoda[1])
+                        k2=int(metoda[2])
+                        pitagora(k1,k2)
                         
                         except:
                 client.close()
