@@ -209,3 +209,14 @@ def listenToClient(self, client, address):
                 elif rand == 3:
                     rand = "Fight Club (1999): Casting Brad Pitt: \n Fight fight fight!"
                     client.send(rand.encode('utf-8'))
+                elif rand == 4:
+                    rand = "A Beautiful Mind (2001): Casting Russell Crowe \n A mathematician gone mad."
+                    client.send(rand.encode('utf-8'))
+                elif rand == 5:
+                    rand = "The Imitation Game (2014): Casting Benedict Cumberbatch \n A russian spy mathematician."
+                    client.send(rand.encode('utf-8'))
+            elif genre == "sci-fi":
+                rand = random.randint(1,5)
+                if rand == 1:
+                    rand = "The Matrix (1999): Casting Keanu Reeves \n A conspiration  "
+                    client.send(rand.encode('utf-8'))
