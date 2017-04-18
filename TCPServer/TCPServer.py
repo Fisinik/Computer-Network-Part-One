@@ -172,3 +172,11 @@ def listenToClient(self, client, address):
                 elif rand == 3:
                     rand = "Bruce Almighty (2003): Casting Jim Carrey: \n Ever imagined being a god? well see if you can beat Morgan Freeman at that!"
                     client.send(rand.encode('utf-8'))
+               elif rand == 4:
+                    rand = "Scary Movies: Casting some wannabes (Emma Roberts): \n All the great movies made fun of."
+                    client.send(rand.encode('utf-8'))
+                elif rand == 5:
+                    rand = "The Hangover (2009): Casting Bradley Cooper, Ed Helms, Zach Galifianakis: \n Crazy stories of three retarded friends. AAND A MONKEY!"
+                    client.send(rand.encode('utf-8'))
+            elif genre == "horror":
+                rand = random.randint(1,5)
