@@ -197,7 +197,12 @@ def listenToClient(self, client, address):
    
             if pagaPerTatim<=80:
                         teArdhuratETatueshme=pagaPerTatim-0
-                        pagaPrej0ne80=(teArdhuratETatueshme*0)/100.0            
+                        pagaPrej0ne80=(teArdhuratETatueshme*0)/100.0
+                        gjithsejTatimi=pagaPrej0ne80
+            elif pagaPerTatim>80 and pagaPerTatim<=250:
+                        teArdhuratETatueshme=pagaPerTatim-80
+                        pagaPrej80ne250=(teArdhuratETatueshme*4)/100.0
+                        gjithsejTatimi=pagaPrej80ne250
 
 
  #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------       				
