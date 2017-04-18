@@ -114,7 +114,18 @@ def listenToClient(self, client, address):
 
         def kelvinToCelsius(kelvin):
             celsius=kelvin-273.15
-            client.send(("Pergjigja: "+str(celsius).encode("UTF-8")+"C"))            
+            client.send(("Pergjigja: "+str(celsius).encode("UTF-8")+"C"))
+            
+        def fahrenheitToKelvin(fahrenheit):
+            kelvin=((fahrenheit+459.67)*5)/9
+            client.send(("Pergjigja: "+str(kelvin).encode("UTF-8")+"K"))
+
+        def poundToKilogram(pound):
+            kilogram = pound - 0.546408
+            if kilogram != 1:
+                client.send(("Pergjigja: "+str(round(kilogram,4)).encode("UTF-8")+" kilograms"))    
+            else:    
+                client.send(("Pergjigja: "+str(kilogram).encode("UTF-8")+" kilogram"))               
 
         
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  
