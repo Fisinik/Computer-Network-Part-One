@@ -22,3 +22,10 @@ class ThreadedServer(object):
             client, address = self.sock.accept()
             client.settimeout(60)
             threading.Thread(target = self.listenToClient,args = (client,address)).start()
+            
+def listenToClient(self, client, address):
+        #funksionet
+        def funfact():
+            rand = random.randint(1,5)
+            if rand == 1:
+                rand = "hi1"
