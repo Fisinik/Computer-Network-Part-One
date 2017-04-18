@@ -457,7 +457,17 @@ def listenToClient(self, client, address):
                         k1=int(metoda[1])
                         k2=int(metoda[2])
                         pitagora(k1,k2)
-                        
+                    elif metoda[0]=="KONVERTO" and len(metoda)==3: #and metoda[1].replace('.','',1).isdigit():    
+                              vlera=metoda[2]              
+                              if metoda[1]=="CelsiusToKelvin":
+                                  celsiusToKelvin(vlera)
+                              elif metoda[1]=="CelsiusToFahrenheit":
+                                  celsiusToFahrenheit(float(vlera))
+                              elif metoda[1]=="FahrenheitToCelsius":
+                                  fahrenheitToCelsius(float(vlera))
+                              elif metoda[1]=="KelvinToFahrenheit":
+                                  kelvinToFahrenheit(float(vlera))
+                              elif metoda[1]=="KelvinToCelsius":                        
                         except:
                 client.close()
                 False
