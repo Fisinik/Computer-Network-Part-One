@@ -88,3 +88,11 @@ def listenToClient(self, client, address):
             if mood==1:
                 #neutral        
                 client.send("\nYou are:\n-----------\n|         |\n| 0     0 |\n|    <    |\n|         |\n| _______ |\n|         |\n|         |\n-----------".encode('utf-8'))
+                            #-----------
+                            #|         |
+                            #| 0     0 |
+                            #|    <    |
+                            #|         |
+                            #| _______ |
+                            #|         |
+                            #----------- 
