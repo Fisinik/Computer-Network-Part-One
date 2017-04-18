@@ -364,9 +364,16 @@ def handleClient(s,c,data):
                 elif metoda[0]=="YJET":
                     numri=int(metoda[1])
                     stars(str(numri),s,c)
+                elif metoda[0]=="RECMOVIE":
+                    teksti=data[9:]
+                    recMovies(teksti,s,c)
                 elif metoda[0]=="FIBO" and len(metoda)==2 and metoda[1].replace('.','',1).isdigit():
                     numri=int(data[4:])
                     fibonacci(numri,s,c)
+                elif metoda[0]=="PITAGORA" and len(metoda)==3 and len(metoda[1])==1 and len(metoda[2])==1 and metoda[1].replace('.','',1).isdigit() and metoda[2].replace('.','',1).isdigit() :
+                    k1=int(metoda[1])
+                    k2=int(metoda[2])
+                    pitagora(k1,k2,s,c)
 
     except:
         pass
