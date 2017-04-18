@@ -54,23 +54,7 @@ def listenToClient(self, client, address):
             elif rand == 12:
                  rand = "During World War II, copper was so badly needed for the war effort (to make shell casings) that the U.S. penny was made out of steel that year, which is why most 1943 pennies are silver colored. They are worth about 12 to 15 cents each in ciruclated condition, and as much as 50 cents or more if Uncirculated."
             return rand 
-       
-        def funfact():
-            rand = random.randint(1,5)
-            if rand == 1:
-                rand = "hi1"
-            elif rand == 2:
-                rand = "hi2"
-            elif rand == 3:
-                rand = "hi3"
-            elif rand == 4:
-                rand = "hi4"
-            elif rand == 5:
-                rand = "hi5"
-            else:
-                rand = "not possible"
-            return rand
-        
+
         def info():
             info="Metodat qe mund te implementohen nga serveri jane:\n1.IP\n2.PORT\n3.ZANORE\n4.PRINTO\n5.HOST\n6.TIME\n7.KENO\n8.FAKTORIEL\n9.KONVERTO\n10.MOOD\n11.PAGA\n12.FUNC\n13.KTHE\n14.CAESAR\nFIBO\nPITAGORA\nFUNFACT\n."     
             client.send(info.encode("utf-8"))
@@ -107,7 +91,7 @@ def listenToClient(self, client, address):
             if sys.getsizeof(a)<=128:
                 client.send(a.encode('utf-8'))
             else:
-                client.send("Error: Pergjigja shume e gjate!")
+                client.send("Error: Pergjigja shume e gjate!".encode('utf-8'))
         
         
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  
