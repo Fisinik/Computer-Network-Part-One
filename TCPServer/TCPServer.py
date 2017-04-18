@@ -253,7 +253,16 @@ def listenToClient(self, client, address):
                 else:
                     tjetri=vleraPare+vleraDyte
                     vleraPare=vleraDyte
-                    vleraDyte=tjetri                
+                    vleraDyte=tjetri  
+                a.append(tjetri)
+            client.send(("Pergjigja:".encode("UTF-8")+str(a[0:]).encode("UTF-8")))
+
+        #Blenda Gashi - Metoda 2
+
+        def pitagora(k1,k2):
+            katrori=math.pow(k1,2)+math.pow(k2,2)                    
+                    
+                    
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
 
         def recMovies(genre):
