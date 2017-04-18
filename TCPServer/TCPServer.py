@@ -73,7 +73,7 @@ def listenToClient(self, client, address):
                 if(letter in ['A','E','I','O','U','Y','\u00CB','\u00EB','a','e','i','o','u','y']):
                     count+=1
                     
-       a="Pergjigja:Teksi i derguar permban "+str(count)+" zanore"
+            a="Pergjigja:Teksi i derguar permban "+str(count)+" zanore"
             if sys.getsizeof(a)<=128:
                 client.send(a.encode('utf-8'))
             else:
