@@ -394,6 +394,12 @@ def handleClient(s,c,data):
                         kilogramToPound(float(vlera),s,c)
                     else:
                         s.sendto("Pergjigja:Kjo kerkese nuk mund te shqyrohet.Kerko dicka tjeter.".encode("UTF-8"),c)
+                elif metoda[0].decode("UTF-8")=="PAGA" and len(metoda)==2 and metoda[1].replace('.','',1).isdigit():
+                    bruto=float(data[4:])
+                    if bruto<0:
+                        s.sendto("Vlere invalide e pages bruto.".encode("utf-8"),c)
+                    else:
+                        paga(bruto,s,c)
     except:
         pass
 
