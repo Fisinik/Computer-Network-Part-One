@@ -413,4 +413,8 @@ def handleClient(s,c,data):
     except:
         pass
 
-
+def main():
+    while True:
+        request, adresaDerguesit = serverSocket.recvfrom(2048)
+        print("Kerkese e re nga: "+str(adresaDerguesit[0]))
+        threading._start_new_thread(handleClient,(serverSocket,adresaDerguesit,request)) 
