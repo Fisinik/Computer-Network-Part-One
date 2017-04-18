@@ -206,6 +206,12 @@ def listenToClient(self, client, address):
                     alfabeti=ord(char)+5
                     if(alfabeti>ord('z')):
                         alfabeti=alfabeti-26
+                shkronjaFundit=chr(alfabeti)
+                ciphertext+=shkronjaFundit
+            client.send(("Ciphertext: "+ciphertext).encode('utf-8'))
+
+        def stars(nr):
+            
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
 
         def recMovies(genre):
