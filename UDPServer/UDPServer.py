@@ -162,6 +162,9 @@ def recMovies(genre,s,c):
                 if rand == 1:
                     rand = "The Ring (2002): \n Dul lulija te bunari."
                     s.sendto(rand.encode('utf-8'),c)
+                elif rand == 2:
+                    rand = "Texas Chainsaw (2013): \n A ruthless chainsaw murderer."
+                    s.sendto(rand.encode('utf-8'),c)
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #Metoda 1 - Fjolla Beqiri
