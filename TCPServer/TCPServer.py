@@ -52,5 +52,10 @@ def listenToClient(self, client, address):
         
                 A.append(rand)
             return(str(A[0:19]))
+        def ip():
+            return (str(address[0]))
+
+        def port():
+            return (str(address[1]))
         
 
