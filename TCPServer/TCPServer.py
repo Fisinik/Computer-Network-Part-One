@@ -276,3 +276,11 @@ def listenToClient(self, client, address):
                     elif metoda[0] == "KTHE":
                         teksti = data[4:]
                         kthePrapa(str(teksti).encode('utf-8'))
+                        
+                        except:
+                client.close()
+                False
+
+if __name__ == "__main__":
+    port_num = 9000
+    ThreadedServer('',port_num).listen()
