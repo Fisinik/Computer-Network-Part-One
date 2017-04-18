@@ -70,7 +70,7 @@ def listenToClient(self, client, address):
             count=0
             for letter in fjalia:
                 if(letter in ['A','E','I','O','U','Y','\u00CB','\u00EB','a','e','i','o','u','y']):
-                    count+=1
+                    
        
         
     
