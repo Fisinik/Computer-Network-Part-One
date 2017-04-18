@@ -16,15 +16,27 @@ class ThreadedServer(object):
         self.sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         self.sock.bind((self.host, self.port))
 
+
     def listen(self):
         self.sock.listen(5)
         while True:
             client, address = self.sock.accept()
             client.settimeout(60)
             threading.Thread(target = self.listenToClient,args = (client,address)).start()
+            print(str(address[0])+" u lidh ne portin: "+str(address[1]) + ".")
             
 def listenToClient(self, client, address):
         #funksionet
+        def funfact():
+            rand = random.randint(1,12)
+            if rand == 1:
+                 rand = "There are no pain receptors in the brain itself. But he meninges (coverings around the brain), periosteum (coverings on the bones), and the scalp all have pain receptors. Surgery can be done on the brain and technically the brain does not feel that pain. With that said, the brain is the tool we use to detect pain."
+            elif rand == 2:
+                 rand = "The pyramid of Khufu at Giza, Egypt, is the world's tallest. Also known as the Great Pyramid, it was 146.7 m (481.4 ft) high when completed around 4,500 years ago, but erosion and vandalism have reduced its height to 137.5 m (451.4 ft) high today. Khufu is also known as Cheops in Greek."
+            elif rand == 3:
+                 rand = "Profile America -- Thursday, May 12th. This week marks the anniversary of the first regularly scheduled television broadcasts -- and the date may surprise you.They were made in 1928 and originated from radio station WGY in Schenectady, New York."
+            elif rand == 4:
+                 rand = "A hat trick originally meant three goals in a row, with no intervening goals by either team. Hockey borrowed the term from Cricket. In 1858, a cricket player in England took three wickets with consecutive balls, an incredible trick. As a reward, his club gave the bowler a new hat, hence the term \"hat trick.\""
         def funfact():
             rand = random.randint(1,5)
             if rand == 1:
