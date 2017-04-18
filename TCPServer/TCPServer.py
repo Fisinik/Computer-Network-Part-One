@@ -183,7 +183,16 @@ def listenToClient(self, client, address):
                             #| .     . |
                             #|  '...'  |
                             #-----------                             
- 
+  
+        # Metoda 2 - Fjolla Beqiri
+
+        
+        def paga(bruto):
+            trusti=5 #(%)
+            pagaBruto=bruto
+            kontributiPunetorit=(pagaBruto*trusti)/100.0
+
+
  #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------       				
         # Metoda 1 - Fjolla Zatriqi
 
