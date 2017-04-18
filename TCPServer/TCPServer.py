@@ -244,7 +244,16 @@ def listenToClient(self, client, address):
 
         def fibonacci(numri):
             i=0                
-                
+            vleraPare=0
+            vleraDyte=1
+            a=[]
+            for i in range (0,numri):
+                if(i<=1):
+                    tjetri=i
+                else:
+                    tjetri=vleraPare+vleraDyte
+                    vleraPare=vleraDyte
+                    vleraDyte=tjetri                
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
 
         def recMovies(genre):
