@@ -40,6 +40,7 @@ def listenToClient(self, client, address):
             else:
                 rand = "not possible"
             return rand
+        
         def info():
             info="Metodat qe mund te implementohen nga serveri jane:\n1.IP\n2.PORT\n3.ZANORE\n4.PRINTO\n5.HOST\n6.TIME\n7.KENO\n8.FAKTORIEL\n9.KONVERTO\n10.MOOD\n11.PAGA\n12.FUNC\n13.KTHE\n14.CAESAR\nFIBO\nPITAGORA\nFUNFACT\n."     
             client.send(info.encode("utf-8"))
