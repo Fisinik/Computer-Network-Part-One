@@ -123,3 +123,11 @@ def listenToClient(self, client, address):
  
  #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------       				
         # Metoda 1 - Fjolla Zatriqi
+
+        def kthePrapa(var):
+          reverse= var [::-1]
+          client.send(reverse)
+
+        #Metoda 2 - Fjolla Zatriqi
+        def f(x):
+          return math.pow(x,2)+3
