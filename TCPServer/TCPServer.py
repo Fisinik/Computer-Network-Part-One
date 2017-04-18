@@ -248,3 +248,12 @@ def listenToClient(self, client, address):
                 metoda = data.split(" ")
 
                 if len(metoda) == 1:
+                    
+                    if metoda[0] == "FUNFACT":
+                        client.send(funfact().encode('utf-8'))
+                    elif metoda[0] == "KENO":
+                        client.send(keno().encode('utf-8'))
+                    elif metoda[0] == "IP":
+                        client.send(ip().encode('utf-8'))
+                    elif metoda[0] == "INFO":
+                        info()
