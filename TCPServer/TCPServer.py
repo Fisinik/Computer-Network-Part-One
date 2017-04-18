@@ -56,8 +56,9 @@ def listenToClient(self, client, address):
         def ip():
             return (str(address[0]))
 
-        def port():
-            return (str(address[1]))
+        
+        
+       
         
     
         
