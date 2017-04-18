@@ -137,6 +137,9 @@ def recMovies(genre,s,c):
                 elif rand == 4:
                     rand = "Spectre (2015): Casting Daniel Craig: \n The famous series of James Bond 007, the latest movie."
                     s.sendto(rand.encode('utf-8'),c)
+                elif rand == 5:
+                    rand = "John Wick (2014): Casting Keanu Reeves: \n Epic fights that make you question the capability of a single's man power."
+                    s.sendto(rand.encode('utf-8'),c)
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #Metoda 1 - Fjolla Beqiri
