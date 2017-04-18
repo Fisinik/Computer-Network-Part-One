@@ -168,6 +168,53 @@ def recMovies(genre,s,c):
                 elif rand == 3:
                     rand = "se7en (): Casting Morgan Freeman, Brad Pitt : \n Two detectives facing a stone-cold serial killer."
                     s.sendto(rand.encode('utf-8'),c)
+                elif rand == 4:
+                    rand = "The Cabin in the Woods (2011): \n Guess what's going to happen?"
+                    s.sendto(rand.encode('utf-8'),c)
+                elif rand == 5:
+                    rand = "The Crow (1994): \n Does he ever die?"
+                    s.sendto(rand.encode('utf-8'),c)
+
+            if genre == "drame":
+                rand = random.randint(1,5)
+                if rand == 1:
+                    rand = "Forest Gump (1994): Casting Tom Hanks: \n Run Forest RUuuun."
+                    s.sendto(rand.encode('utf-8'),c)
+
+                elif rand == 2:
+                    rand = "Casablanca (1942): Casting Humphrey Bogart, Madeleine LeBeau: \n A movie older that my grandma."
+                    s.sendto(rand.encode('utf-8'),c)
+                elif rand == 3:
+                    rand = "Fight Club (1999): Casting Brad Pitt: \n Fight fight fight!"
+                    s.sendto(rand.encode('utf-8'),c)
+                elif rand == 4:
+                    rand = "A Beautiful Mind (2001): Casting Russell Crowe \n A mathematician gone mad."
+                    s.sendto(rand.encode('utf-8'),c)
+                elif rand == 5:
+                    rand = "The Imitation Game (2014): Casting Benedict Cumberbatch \n A russian spy mathematician."
+                    s.sendto(rand.encode('utf-8'),c)
+            elif genre == "sci-fi":
+                rand = random.randint(1,5)
+                if rand == 1:
+                    rand = "The Matrix (1999): Casting Keanu Reeves \n A conspiration  "
+                    s.sendto(rand.encode('utf-8'),c)
+                elif rand == 2:
+                    rand = "Star Wars-The Force Awakens (2017): Casting Harrison Ford, Mark Hamill \n The force needs five more minutes."
+                    s.sendto(rand.encode('utf-8'),c)
+                elif rand == 3:
+                    rand = "Interstellar (2014): Casting Matthew McConaughey, Anne Hathaway \n What do you do when stuck in a 5th dimension in outer space? Travel back in time and scare your daughter."
+                    s.sendto(rand.encode('utf-8'),c)
+                elif rand == 4:
+                    rand = "Planet of the Apes (2001): Casting Mark Wahlberg: \n Monkeys gone wild."
+                    s.sendto(rand.encode('utf-8'),c)
+                elif rand == 5:
+                    rand = "Eternal Sunshine of the Spotless Mind (2004): Casting Jim Carrey (no it's not comedy) \n He finally meets the woman of his life and then loses his memory."
+                    s.sendto(rand.encode('utf-8'),c)
+            elif genre == "random":
+                rand = random.randint(0,4)
+                A= ["aksion", "horror", "sci-fi", "drame", "komedi" ]
+                randomMovie = A[rand]
+                recMovies(randomMovie,s,c)
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #Metoda 1 - Fjolla Beqiri
