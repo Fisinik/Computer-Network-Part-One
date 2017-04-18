@@ -287,9 +287,53 @@ def pitagora(k1,k2,s,c):
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+def handleClient(s,c,data):
+    try:
+        if (data.decode('utf-8')).isspace() :
+                  s.sendto("Shtypni dicka",c)
+        else:
+            metoda=data.split(" ")
+            if len(metoda)==1:       
+                if metoda[0].decode("UTF-8") == "KENO":
+                     keno(s,c)
+                elif metoda[0].decode("UTF-8") == "INFO":   
+                     info(s,c)
+                elif metoda[0].decode("UTF-8") == "IP":
+                    a="Pergjigja:IP adresa e klientit eshte ".encode("UTF-8")+str(c[0]).encode("UTF-8")
+                    if(sys.getsizeof(a)<=128):
+                          s.sendto(a,c)
+                    else:
+                          conn.send("Error:Pergjigja shume e gjate!")
+                elif metoda[0].decode("UTF-8") =="PORT":
+                    a="Pergjigja:Klienti eshte duke perdorur portin ".encode("UTF-8")+str(c[1]).encode("UTF-8")
+                    if(sys.getsizeof(a)<=128):
+                          s.sendto(a,c)
+                    else:
+                          conn.send("Error:Pergjigja shume e gjate!")
+                elif metoda[0].decode("UTF-8") =="TIME":
+                    currentTime = time.ctime(time.time()) + "\r"
+                    if(sys.getsizeof(currentTime)<=128):
+                          s.sendto(currentTime.encode('UTF-8'),c)
+                    else:
+                          s.sendto("Error:Pergjigja shume e gjate!",c)
+                elif metoda[0].decode("UTF-8") =="HOST":
+                    try:
+                        a=gethostname().encode("UTF-8")
+                        if(sys.getsizeof(a)<=128):
+                            s.sendto(a,c)
+                    else:
+                          s.sendto("Error:Pergjigja shume e gjate!",c)
+                    except errno:
+                        s.sendto("Emri i klientit nuk dihet",c)
+                elif metoda[0].decode("UTF-8")=="MOOD":
+                      mood(s,c)
+                elif metoda[0].decode("UTF-8")=="FUNFACT":
+                      funfact(s,c)
+                else:
+                    s.sendto("Pergjigja:Kjo kerkese nuk mund te kryhet.Kerko dicka tjeter.".encode("UTF-8"),c)
 
 
-
-
+    except:
+        pass
 
 
