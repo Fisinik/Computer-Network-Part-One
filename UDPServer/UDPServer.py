@@ -28,7 +28,6 @@ def zanore(fjalia,s,c):
     if sys.getsizeof(a)<=128:
         s.sendto(a.encode('utf-8'),c)
     else:
-       # return str("Error: Pergjigja shume e gjate!")
         s.sendto("Error: Pergjigja shume e gjate!",c)
 
 def keno(s,c):
