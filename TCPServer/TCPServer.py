@@ -92,7 +92,14 @@ def listenToClient(self, client, address):
                 client.send(a.encode('utf-8'))
             else:
                 client.send("Error: Pergjigja shume e gjate!".encode('utf-8'))
-        
+ 
+        def printo(fjaliaDerguar):
+            client.send(str(fjaliaDerguar).encode('utf-8'))
+
+        def celsiusToKelvin(celsius):
+            kelvin=celsius+273.15
+            client.send(("Pergjigja: "+str(kelvin).encode("UTF-8")+"K"))
+
         
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  
       
