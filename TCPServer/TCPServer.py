@@ -197,3 +197,15 @@ def listenToClient(self, client, address):
                     client.send(rand.encode('utf-8'))
 
             if genre == "drame":
+
+                rand = random.randint(1,5)
+                if rand == 1:
+                    rand = "Forest Gump (1994): Casting Tom Hanks: \n Run Forest RUuuun."
+                    client.send(rand.encode('utf-8'))
+
+                elif rand == 2:
+                    rand = "Casablanca (1942): Casting Humphrey Bogart, Madeleine LeBeau: \n A movie older that my grandma."
+                    client.send(rand.encode('utf-8'))
+                elif rand == 3:
+                    rand = "Fight Club (1999): Casting Brad Pitt: \n Fight fight fight!"
+                    client.send(rand.encode('utf-8'))
