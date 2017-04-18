@@ -266,11 +266,13 @@ def listenToClient(self, client, address):
                     elif metoda[0] == "MOOD":
                         mood()
 
-                    elif metoda[0] == "PORT":
-                        client.send(port().encode('utf-8'))
-                    elif metoda[0] == "TIME":
-                        client.send(koha().encode('utf-8'))
-                    elif metoda[0] == "HOST":
-                        client.send(host().encode('utf-8'))
-                    elif metoda[0] == "MOOD":
-                        mood()
+                else:  
+                    if metoda[0] == "ZANORE":
+                        teksti = data[7:]
+                        zanore(teksti) 
+                    elif metoda[0] == "RECMOVIE":
+                        teksti = data[9:]
+                        recMovies(teksti)
+                    elif metoda[0] == "KTHE":
+                        teksti = data[4:]
+                        kthePrapa(str(teksti).encode('utf-8'))
