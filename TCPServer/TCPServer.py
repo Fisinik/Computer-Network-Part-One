@@ -56,7 +56,12 @@ def listenToClient(self, client, address):
         def ip():
             return (str(address[0]))
 
-        
+        def port():
+            return (str(address[1]))
+
+        def koha():
+            currentTime = time.ctime(time.time())
+            return str(currentTime)
         
        
         
