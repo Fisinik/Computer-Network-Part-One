@@ -308,7 +308,7 @@ def listenToClient(self, client, address):
         #---------------------------------------------------------------------------------------------------------------------------------------------------------------------                    
                     
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
-
+#fisnik Spahija - Metoda 2
         def recMovies(genre):
     
             if genre == "aksion":
@@ -394,7 +394,7 @@ def listenToClient(self, client, address):
                     rand = "Planet of the Apes (2001): Casting Mark Wahlberg: \n Monkeys gone wild."
                     client.send(rand.encode('utf-8'))
                 elif rand == 5:
-            rand = "Eternal Sunshine of the Spotless Mind (2004): Casting Jim Carrey (no it's not comedy) \n He finally meets the woman of his life and then loses his memory."
+                    rand = "Eternal Sunshine of the Spotless Mind (2004): Casting Jim Carrey (no it's not comedy) \n He finally meets the woman of his life and then loses his memory."
                     client.send(rand.encode('utf-8'))
             elif genre == "random":
                 rand = random.randint(0,4)
@@ -432,12 +432,20 @@ def listenToClient(self, client, address):
                     if metoda[0] == "ZANORE":
                         teksti = data[7:]
                         zanore(teksti) 
-                    elif metoda[0] == "RECMOVIE":
+                    elif metoda[0] == "RECMOVIE" and len(metoda) >1:
                         teksti = data[9:]
                         recMovies(teksti)
                     elif metoda[0] == "KTHE":
                         teksti = data[4:]
                         kthePrapa(str(teksti).encode('utf-8'))
+                        elif metoda[0] == "PRINTO":
+                        teksti = data[7:]
+                        printo(teksti)
+                    elif metoda[0] == "CAESAR":
+                        plaintext=data[7:]
+                        if plaintext.isdigit():
+                              client.send("Pergjigja:Keni dhene parameter te gabuar.")
+                        else:
                         
                         except:
                 client.close()
