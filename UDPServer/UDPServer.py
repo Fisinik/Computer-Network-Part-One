@@ -81,7 +81,7 @@ def kilogramToPound(kilogram,s,c):
         s.sendto(("Pergjigja: "+str(pound).encode("UTF-8")+" pound"),c)   
 
 def faktorieli(numri,s,c):
-    i=1
+    i=0
     f=1
     for i in range(1,numri+1):
         f=f*i
