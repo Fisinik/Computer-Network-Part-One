@@ -26,7 +26,6 @@ def zanore(fjalia,s,c):
             count=count+1
     a="Pergjigja:Teksi i derguar permban "+str(count)+" zanore"
     if sys.getsizeof(a)<=128:
-       # return str(a.encode('utf-8'))
         s.sendto(a.encode('utf-8'),c)
     else:
        # return str("Error: Pergjigja shume e gjate!")
