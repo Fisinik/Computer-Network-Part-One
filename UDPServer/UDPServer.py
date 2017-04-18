@@ -400,6 +400,16 @@ def handleClient(s,c,data):
                         s.sendto("Vlere invalide e pages bruto.".encode("utf-8"),c)
                     else:
                         paga(bruto,s,c)
+                elif metoda[0].decode("utf-8")=="FAKTORIEL" and len(metoda)==2 and metoda[1].replace('.','',1).isdigit():
+                    numri=metoda[1]
+                    if "." not in numri:
+                        faktorieli(int(numri),s,c)
+                    elif "." in numri:
+                        numri=float(metoda[1])
+                        s.sendto(str(round(math.gamma(numri+1),5)).encode("utf-8"),c)
+
+                    else:
+                        s.sendto("Pergjigja:Kjo kerkese nuk mund te shqyrohet.Kerko dicka tjeter.".encode("UTF-8"),c)
     except:
         pass
 
