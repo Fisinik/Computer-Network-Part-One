@@ -161,3 +161,14 @@ def listenToClient(self, client, address):
                 elif rand == 5:
                     rand = "John Wick (2014): Casting Keanu Reeves: \n Epic fights that make you question the capability of a single's man power."
                     client.send(rand.encode('utf-8'))
+            elif genre == "komedi":
+                rand = random.randint(1,5)
+                if rand == 1:
+                    rand = "Why Him? (2016): Casting James Franco: \n Hilarious."
+                    client.send(rand.encode('utf-8'))
+                elif rand == 2:
+                    rand = "Fist Fight (2017): Casting Ice Cube, Charlie Day \n Teachers fighting over nothing."
+                    client.send(rand.encode('utf-8'))
+                elif rand == 3:
+                    rand = "Bruce Almighty (2003): Casting Jim Carrey: \n Ever imagined being a god? well see if you can beat Morgan Freeman at that!"
+                    client.send(rand.encode('utf-8'))
