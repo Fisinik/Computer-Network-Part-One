@@ -50,12 +50,6 @@ def listenToClient(self, client, address):
             for i in range (0,19):            
                 rand = random.randint(1,80)
         
-                A.append(rand)
-            return(str(A[0:19]))
-        def ip():
-            return (str(address[0]))
-
-        def port():
-            return (str(address[1]))
+    
         
 
