@@ -128,6 +128,9 @@ def recMovies(genre,s,c):
                 if rand == 1:
                     rand = "Taken (2008): Casting Liam Neeson (the badass) and his daughter (Maggie Grace) kidnapped by some drug dealing Albanians"
                     s.sendto(rand.encode('utf-8'),c)
+                elif rand == 2:
+                    rand = "The Avengers (2012): Casting Robert Downey Jr., Chris Evans, Natalie Portman, Tom Hiddleston. \n A fight between good and evil, deities and humans"
+                    s.sendto(rand.encode('utf-8'),c)
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #Metoda 1 - Fjolla Beqiri
