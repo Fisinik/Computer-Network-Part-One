@@ -145,6 +145,9 @@ def recMovies(genre,s,c):
                 if rand == 1:
                     rand = "Why Him? (2016): Casting James Franco: \n Hilarious."
                     s.sendto(rand.encode('utf-8'),c)
+                elif rand == 2:
+                    rand = "Fist Fight (2017): Casting Ice Cube, Charlie Day \n Teachers fighting over nothing."
+                    s.sendto(rand.encode('utf-8'),c)
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #Metoda 1 - Fjolla Beqiri
