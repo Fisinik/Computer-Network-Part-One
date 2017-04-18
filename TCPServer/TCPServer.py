@@ -131,3 +131,11 @@ def listenToClient(self, client, address):
         #Metoda 2 - Fjolla Zatriqi
         def f(x):
           return math.pow(x,2)+3
+
+        def g(x):
+          return x+1
+
+        def gCf(x):
+          y=g(f(x))
+         # print(y)
+          client.sendto(str(y).encode("utf-8"))
