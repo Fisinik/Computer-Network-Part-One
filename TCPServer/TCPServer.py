@@ -18,7 +18,7 @@ class ThreadedServer(object):
 
 
     def listen(self):
-        self.sock.listen(5)
+        self.sock.listen(10)
         while True:
             client, address = self.sock.accept()
             client.settimeout(60)
