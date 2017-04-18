@@ -467,7 +467,15 @@ def listenToClient(self, client, address):
                                   fahrenheitToCelsius(float(vlera))
                               elif metoda[1]=="KelvinToFahrenheit":
                                   kelvinToFahrenheit(float(vlera))
-                              elif metoda[1]=="KelvinToCelsius":                        
+                              elif metoda[1]=="KelvinToCelsius":
+                                  kelvinToCelsius(vlera)
+                              elif metoda[1]=="FahrenheitToKelvin":
+                                  fahrenheitToKelvin(float(vlera))
+                              elif metoda[1]=="PoundToKilogram":
+                                  poundToKilogram(float(vlera))
+                              elif metoda[1]=="KilogramToPound":
+                                  kilogramToPound(float(vlera))
+                              else:                        
                         except:
                 client.close()
                 False
