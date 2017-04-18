@@ -127,7 +127,15 @@ def listenToClient(self, client, address):
             else:    
                 client.send(("Pergjigja: "+str(kilogram).encode("UTF-8")+" kilogram"))               
 
-        
+        def kilogramToPound(kilogram):
+            pound = kilogram + 0.546408
+            if pound != 1:
+                client.send(("Pergjigja: "+str(round(pound,4)).encode("UTF-8")+" pounds"))   
+            else:
+                client.send(("Pergjigja: "+str(pound).encode("UTF-8")+" pound"))   
+                
+                
+                
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  
       
     #Metoda 1 - Fjolla Beqiri
