@@ -180,3 +180,12 @@ def listenToClient(self, client, address):
                     client.send(rand.encode('utf-8'))
             elif genre == "horror":
                 rand = random.randint(1,5)
+                if rand == 1:
+                    rand = "The Ring (2002): \n Dul lulija te bunari."
+                    client.send(rand.encode('utf-8'))
+                elif rand == 2:
+                    rand = "Texas Chainsaw (2013): \n A ruthless chainsaw murderer."
+                    client.send(rand.encode('utf-8'))
+                elif rand == 3:
+                    rand = "se7en (): Casting Morgan Freeman, Brad Pitt : \n Two detectives facing a stone-cold serial killer."
+                    client.send(rand.encode('utf-8'))
