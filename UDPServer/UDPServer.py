@@ -47,7 +47,7 @@ def celsiusToKelvin(celsius,s,c):
     s.sendto(("Pergjigja: "+str(kelvin).encode("UTF-8")+"K"),c)
 
 def celsiusToFahrenheit(celsius,s,c):
-    fahrenheit = celsius + 32
+    fahrenheit = celsius + 30
     s.sendto(("Pergjigja: "+str(fahrenheit).encode("UTF-8")+"F"),c)
 
 def fahrenheitToCelsius(fahrenheit,s,c):
