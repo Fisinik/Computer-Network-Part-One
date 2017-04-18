@@ -35,3 +35,8 @@ def listenToClient(self, client, address):
                 rand = "hi3"
             elif rand == 4:
                 rand = "hi4"
+                elif rand == 5:
+                rand = "hi5"
+            else:
+                rand = "not possible"
+            return rand
