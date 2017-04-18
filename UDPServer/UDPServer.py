@@ -199,21 +199,19 @@ def paga(bruto,s,c):
 # Metoda 1 - Fjolla Zatriqi
 
 def kthePrapa(var,s,c):
-  reverse= var [::-1]
-  s.sendto(str(reverse),c)
+    reverse= var [::-1]
+    s.sendto(str(reverse),c)
 
 #Metoda 2 - Fjolla Zatriqi
 def f(x):
-  return math.pow(x,2)+3
+    return math.pow(x,2)+3
 
 def g(x):
-  return x+1
+    return x+1
 
 def gCf(x,s,c):
-  y=g(f(x))
-
-  s.sendto(str(y).encode("utf-8"),c)
- 
+    y=g(f(x))
+    s.sendto(str(y).encode("utf-8"),c)
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -229,6 +227,8 @@ def caesar(plaintext,s,c):
         shkronjaFundit=chr(alfabeti)
         ciphertext+=shkronjaFundit
     s.sendto("Ciphertext: "+str(ciphertext),c)
+    
+#Elza Latifi-Metoda 2
 
 def stars(nr,s,c):
     
