@@ -45,6 +45,11 @@ def listenToClient(self, client, address):
                  rand = "The arrangement of the first six letters in the top alphabet row of a standard keyboard QWERTY goes way back. The layout was created in 1873 when Christopher Latham Sholes made improvements to his earlier typewriter models in order to design a quicker and more efficient typewriter for E. Remington and Sons."
             elif rand == 8:
                  rand = "A chin is a protrusion at the front of the mandible bone, which humans and elephants have while gorillas-and apparently every other animal-do not have. Skulls of animals in question."
+            elif rand == 9:
+                 rand = "Giant Jupiter is almost three times heavier than all the other eight planets put together. This sounds like a simple, .straightforward answer to the question, but there is more to it. Jupiter is 1,318 times . to an equal volume of water.Giant Jupiter is almost three times heavier than all the other eight planets put together. This sounds like a simple, .straightforward answer to the question, but there is more to it. Jupiter is 1,318 times . to an equal volume of water."
+            elif rand == 10:
+                 rand = "Mel Blanc ( the voice of Looney Tunes ) performed in 709 films, not including over 100 TV movies and video productions. He also had 81 uncredited voice parts in films. Right behind Mel Blanc on the IMDB's list of most prolific actors is Adoor Bhasi. Before his death in 1990, Bhasi was featured in 549 films."
+         
         def funfact():
             rand = random.randint(1,5)
             if rand == 1:
