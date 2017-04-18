@@ -191,6 +191,13 @@ def listenToClient(self, client, address):
             trusti=5 #(%)
             pagaBruto=bruto
             kontributiPunetorit=(pagaBruto*trusti)/100.0
+            kontributiPunedhenesit=kontributiPunetorit
+            gjithsejKontributet=kontributiPunetorit+kontributiPunedhenesit
+            pagaPerTatim=pagaBruto-kontributiPunetorit
+   
+            if pagaPerTatim<=80:
+                        teArdhuratETatueshme=pagaPerTatim-0
+                        pagaPrej0ne80=(teArdhuratETatueshme*0)/100.0            
 
 
  #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------       				
