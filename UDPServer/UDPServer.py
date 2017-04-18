@@ -374,7 +374,26 @@ def handleClient(s,c,data):
                     k1=int(metoda[1])
                     k2=int(metoda[2])
                     pitagora(k1,k2,s,c)
-
+                elif metoda[0]=="KONVERTO" and len(metoda)==3 and metoda[2].replace('.','',1).isdigit():    
+                    vlera=metoda[2]              
+                    if metoda[1]=="CelsiusToKelvin":
+                        celsiusToKelvin(float(vlera),s,c)
+                    elif metoda[1]=="CelsiusToFahrenheit":
+                        celsiusToFahrenheit(float(vlera),s,c)
+                    elif metoda[1]=="FahrenheitToCelsius":
+                        fahrenheitToCelsius(float(vlera),s,c)
+                    elif metoda[1]=="KelvinToFahrenheit":
+                        kelvinToFahrenheit(float(vlera),s,c)
+                    elif metoda[1]=="KelvinToCelsius":
+                        kelvinToCelsius(float(vlera),s,c)
+                    elif metoda[1]=="FahrenheitToKelvin":
+                        fahrenheitToKelvin(float(vlera),s,c)
+                    elif metoda[1]=="PoundToKilogram":
+                        poundToKilogram(float(vlera),s,c)
+                    elif metoda[1]=="KilogramToPound":
+                        kilogramToPound(float(vlera),s,c)
+                    else:
+                        s.sendto("Pergjigja:Kjo kerkese nuk mund te shqyrohet.Kerko dicka tjeter.".encode("UTF-8"),c)
     except:
         pass
 
