@@ -1,7 +1,7 @@
 from socket import *
 import sys
-host=''
-port=
+host='localhost'
+port=9000
 
 clientSocket=socket(AF_INET,SOCK_DGRAM)
 
