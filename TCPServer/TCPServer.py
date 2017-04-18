@@ -195,14 +195,11 @@ def listenToClient(self, client, address):
                 elif rand == 5:
                     rand = "The Crow (1994): \n Does he ever die?"
                     client.send(rand.encode('utf-8'))
-
             if genre == "drame":
-
                 rand = random.randint(1,5)
                 if rand == 1:
                     rand = "Forest Gump (1994): Casting Tom Hanks: \n Run Forest RUuuun."
                     client.send(rand.encode('utf-8'))
-
                 elif rand == 2:
                     rand = "Casablanca (1942): Casting Humphrey Bogart, Madeleine LeBeau: \n A movie older that my grandma."
                     client.send(rand.encode('utf-8'))
@@ -220,7 +217,6 @@ def listenToClient(self, client, address):
                 if rand == 1:
                     rand = "The Matrix (1999): Casting Keanu Reeves \n A conspiration  "
                     client.send(rand.encode('utf-8'))
-
                 elif rand == 2:
                     rand = "Star Wars-The Force Awakens (2017): Casting Harrison Ford, Mark Hamill \n The force needs five more minutes."
                     client.send(rand.encode('utf-8'))
@@ -231,8 +227,7 @@ def listenToClient(self, client, address):
                     rand = "Planet of the Apes (2001): Casting Mark Wahlberg: \n Monkeys gone wild."
                     client.send(rand.encode('utf-8'))
                 elif rand == 5:
-
-                    rand = "Eternal Sunshine of the Spotless Mind (2004): Casting Jim Carrey (no it's not comedy) \n He finally meets the woman of his life and then loses his memory."
+            rand = "Eternal Sunshine of the Spotless Mind (2004): Casting Jim Carrey (no it's not comedy) \n He finally meets the woman of his life and then loses his memory."
                     client.send(rand.encode('utf-8'))
             elif genre == "random":
                 rand = random.randint(0,4)
