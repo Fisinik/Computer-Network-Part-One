@@ -106,6 +106,14 @@ def listenToClient(self, client, address):
 
         def fahrenheitToCelsius(fahrenheit):
             celsius = fahrenheit - 32 
+            client.send(("Pergjigja: "+str(celsius).encode("UTF-8")+"C"))
+            
+        def kelvinToFahrenheit(kelvin):
+            fahrenheit=kelvin*1.8-459.67
+            client.send(("Pergjigja: "+str(fahrenheit).encode("UTF-8")+"F"))
+
+        def kelvinToCelsius(kelvin):
+            celsius=kelvin-273.15
             client.send(("Pergjigja: "+str(celsius).encode("UTF-8")+"C"))            
 
         
