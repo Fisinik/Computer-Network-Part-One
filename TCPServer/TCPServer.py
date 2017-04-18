@@ -101,3 +101,15 @@ def listenToClient(self, client, address):
                 #sad
                 client.send("\nYou are:\n-----------\n|         |\n| 0     0 |\n|    <    |\n|         |\n|    .    |\n|  .   .  |\n| .     . |\n-----------".encode('utf-8'))
                             #-----------
+                            #|         |
+                            #| 0     0 |
+                            #|    <    |
+                            #|         |
+                            #|    .    |
+                            #| .'   '. |
+                            #-----------
+                            
+            elif mood==3:
+                #happy
+                client.send("\nYou are:\n-----------\n|         |\n| 0     0 |\n|    <    |\n|         |\n| .     . |\n|  .   .  |\n|   ...   |\n-----------".encode('utf-8'))
+                            #-----------                            
