@@ -37,6 +37,14 @@ def listenToClient(self, client, address):
                  rand = "Profile America -- Thursday, May 12th. This week marks the anniversary of the first regularly scheduled television broadcasts -- and the date may surprise you.They were made in 1928 and originated from radio station WGY in Schenectady, New York."
             elif rand == 4:
                  rand = "A hat trick originally meant three goals in a row, with no intervening goals by either team. Hockey borrowed the term from Cricket. In 1858, a cricket player in England took three wickets with consecutive balls, an incredible trick. As a reward, his club gave the bowler a new hat, hence the term \"hat trick.\""
+                    elif rand == 5:
+                 rand = "All communication between Mars and Earth goes through satellites. Because of the distance, there is a substantial delay. As communication signals travel at the speed of light, this means that it can take between 3 and 22 minutes for the information to reach the other end, so a phone call would not be practical."
+            elif rand == 6:
+                 rand = "For example, in 1971, Phil Knight paid Carolyn Davidson $35 to create the Nike \"Swoosh\" logo. Today, global brand consultancy Interbrand ranks Nike No. 25 on its list of the top 100 most valuable brands in the world, with an estimated value of more than $13 billion." 
+            elif rand == 7:
+                 rand = "The arrangement of the first six letters in the top alphabet row of a standard keyboard QWERTY goes way back. The layout was created in 1873 when Christopher Latham Sholes made improvements to his earlier typewriter models in order to design a quicker and more efficient typewriter for E. Remington and Sons."
+            elif rand == 8:
+                 rand = "A chin is a protrusion at the front of the mandible bone, which humans and elephants have while gorillas-and apparently every other animal-do not have. Skulls of animals in question."
         def funfact():
             rand = random.randint(1,5)
             if rand == 1:
