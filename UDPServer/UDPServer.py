@@ -140,6 +140,11 @@ def recMovies(genre,s,c):
                 elif rand == 5:
                     rand = "John Wick (2014): Casting Keanu Reeves: \n Epic fights that make you question the capability of a single's man power."
                     s.sendto(rand.encode('utf-8'),c)
+            elif genre == "komedi":
+                rand = random.randint(1,5)
+                if rand == 1:
+                    rand = "Why Him? (2016): Casting James Franco: \n Hilarious."
+                    s.sendto(rand.encode('utf-8'),c)
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #Metoda 1 - Fjolla Beqiri
