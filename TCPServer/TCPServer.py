@@ -49,7 +49,12 @@ def listenToClient(self, client, address):
                  rand = "Giant Jupiter is almost three times heavier than all the other eight planets put together. This sounds like a simple, .straightforward answer to the question, but there is more to it. Jupiter is 1,318 times . to an equal volume of water.Giant Jupiter is almost three times heavier than all the other eight planets put together. This sounds like a simple, .straightforward answer to the question, but there is more to it. Jupiter is 1,318 times . to an equal volume of water."
             elif rand == 10:
                  rand = "Mel Blanc ( the voice of Looney Tunes ) performed in 709 films, not including over 100 TV movies and video productions. He also had 81 uncredited voice parts in films. Right behind Mel Blanc on the IMDB's list of most prolific actors is Adoor Bhasi. Before his death in 1990, Bhasi was featured in 549 films."
-         
+            elif rand == 11:
+                 rand = "The four kings, for example, are based on real rulers: the king of diamonds represents the wealthy Julius Caesar; the king of clubs is the brutal Alexander the Great; the king of spades represents the strong but kind David of Israel; and the king of Hearts represents the emotionally disturbed Charles VII of France."
+            elif rand == 12:
+                 rand = "During World War II, copper was so badly needed for the war effort (to make shell casings) that the U.S. penny was made out of steel that year, which is why most 1943 pennies are silver colored. They are worth about 12 to 15 cents each in ciruclated condition, and as much as 50 cents or more if Uncirculated."
+            return rand 
+       
         def funfact():
             rand = random.randint(1,5)
             if rand == 1:
