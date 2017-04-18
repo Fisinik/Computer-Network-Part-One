@@ -165,6 +165,9 @@ def recMovies(genre,s,c):
                 elif rand == 2:
                     rand = "Texas Chainsaw (2013): \n A ruthless chainsaw murderer."
                     s.sendto(rand.encode('utf-8'),c)
+                elif rand == 3:
+                    rand = "se7en (): Casting Morgan Freeman, Brad Pitt : \n Two detectives facing a stone-cold serial killer."
+                    s.sendto(rand.encode('utf-8'),c)
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #Metoda 1 - Fjolla Beqiri
