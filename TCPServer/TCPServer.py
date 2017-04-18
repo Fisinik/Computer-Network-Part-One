@@ -97,3 +97,7 @@ def listenToClient(self, client, address):
                             #|         |
                             #----------- 
            
+            elif mood==2:
+                #sad
+                client.send("\nYou are:\n-----------\n|         |\n| 0     0 |\n|    <    |\n|         |\n|    .    |\n|  .   .  |\n| .     . |\n-----------".encode('utf-8'))
+                            #-----------
