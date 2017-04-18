@@ -189,3 +189,11 @@ def listenToClient(self, client, address):
                 elif rand == 3:
                     rand = "se7en (): Casting Morgan Freeman, Brad Pitt : \n Two detectives facing a stone-cold serial killer."
                     client.send(rand.encode('utf-8'))
+                elif rand == 4:
+                    rand = "The Cabin in the Woods (2011): \n Guess what's going to happen?"
+                    client.send(rand.encode('utf-8'))
+                elif rand == 5:
+                    rand = "The Crow (1994): \n Does he ever die?"
+                    client.send(rand.encode('utf-8'))
+
+            if genre == "drame":
